@@ -1,10 +1,11 @@
 #include <iostream>
 #include <random>
 #include <vector>
+#include <fstream>
 
 using namespace std;
 
-int dist_euclidiana(vector<double>va1,vector<doubler>va2)
+int dist_euclidiana(vector<double>va1,vector<doubler>va2,ofstream &archivo)
 {
 	double distancia = 0;
 	vector<double>::iterator i = va1.begin();
@@ -16,7 +17,12 @@ int dist_euclidiana(vector<double>va1,vector<doubler>va2)
 		suma += temp;
 		j++;
 	}
+	
 	distancia = sqrt(suma);
+	if(archivo.is_open)
+	{
+		archivo<< distancia << endl;
+	}
 	cout<<distancia;
 	return distancia;
 }
@@ -41,8 +47,10 @@ int main()
 	}
 	vector<vector<double>>::iterator i = mapa.begin();
 	vector<vector<double>>::iterator j = mapa[i];
-	for(;i<mapa.end();i++)
+	for(;j<mapa.end();j++)
 	{
-		
+		ofstream archivo("datos.csv")
+		dist_euclidiana(*i,*j, archivo);
+		archivo.close()
 	}
 }
