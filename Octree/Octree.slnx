@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="Octree/Octree.vcxproj" />
+  <Project Path="Octree/Octree.vcxproj" Id="ef5d96e4-d185-4616-8166-8d62bab4a0eb" />
 </Solution>

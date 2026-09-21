@@ -1,11 +1,13 @@
 #include <iostream>
 #include <random>
 #include <vector>
+#include <cmath>
 #include <fstream>
+#include <string>
 
 using namespace std;
 
-int dist_euclidiana(vector<double>va1,vector<doubler>va2,ofstream &archivo)
+double dist_euclidiana(vector<double>va1,vector<double>va2,ofstream &archivo, int dim)
 {
 	double distancia = 0;
 	vector<double>::iterator i = va1.begin();
@@ -19,11 +21,10 @@ int dist_euclidiana(vector<double>va1,vector<doubler>va2,ofstream &archivo)
 	}
 	
 	distancia = sqrt(suma);
-	if(archivo.is_open)
+	if(archivo.is_open())
 	{
 		archivo<< distancia << endl;
 	}
-	cout<<distancia;
 	return distancia;
 }
 
@@ -31,10 +32,11 @@ int main()
 {
 	random_device rd;
 	mt19937 gen(rd());
-	uniform_int_distribution<> dis(0.0,1.0);
+	uniform_real_distribution<double> dis(0.0,1.0);
 	int dim = 0;
 	cout<<"ingrese el numero de dimensiones: ";
 	cin>>dim;
+	string nombre = "datos_"+ to_string(dim) + ".csv";
 	vector<vector<double>>mapa;
 	for(int i = 0; i < 100; i++)
 	{
@@ -45,12 +47,21 @@ int main()
 		}
 		mapa.push_back(nros);
 	}
-	vector<vector<double>>::iterator i = mapa.begin();
-	vector<vector<double>>::iterator j = mapa[i];
-	for(;j<mapa.end();j++)
+
+	ofstream archivo(nombre, ios::app);
+	if(!archivo.is_open())
 	{
-		ofstream archivo("datos.csv")
-		dist_euclidiana(*i,*j, archivo);
-		archivo.close()
+		cout<<"Error al crear el archivo"<<endl;
+		return 0;
 	}
+	for(vector<vector<double>>::iterator i = mapa.begin();i<mapa.end();i++)
+	{
+		for(vector<vector<double>>::iterator j = i + 1;j<mapa.end();j++)
+		{
+			dist_euclidiana(*i,*j, archivo,dim);
+		}
+	}
+	archivo.close();
+	cout<<"datos guardados con exito"<<endl;
+	return 0;
 }

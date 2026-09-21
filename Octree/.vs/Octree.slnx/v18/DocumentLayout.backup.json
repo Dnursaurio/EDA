@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\EDA\\Octree\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EF5D96E4-D185-4616-8166-8D62BAB4A0EB}|Octree\\Octree.vcxproj|D:\\EDA\\Octree\\Octree\\Octree.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{EF5D96E4-D185-4616-8166-8D62BAB4A0EB}|Octree\\Octree.vcxproj|solutionrelative:Octree\\Octree.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF5D96E4-D185-4616-8166-8D62BAB4A0EB}|Octree\\Octree.vcxproj|D:\\EDA\\Octree\\Octree\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{EF5D96E4-D185-4616-8166-8D62BAB4A0EB}|Octree\\Octree.vcxproj|solutionrelative:Octree\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Octree.hpp",
+              "DocumentMoniker": "D:\\EDA\\Octree\\Octree\\Octree.hpp",
+              "RelativeDocumentMoniker": "Octree\\Octree.hpp",
+              "ToolTip": "D:\\EDA\\Octree\\Octree\\Octree.hpp",
+              "RelativeToolTip": "Octree\\Octree.hpp",
+              "ViewState": "AgIAALMAAAAAAAAAAAAAANMAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-09-17T21:54:39.724Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Main.cpp",
+              "DocumentMoniker": "D:\\EDA\\Octree\\Octree\\Main.cpp",
+              "RelativeDocumentMoniker": "Octree\\Main.cpp",
+              "ToolTip": "D:\\EDA\\Octree\\Octree\\Main.cpp",
+              "RelativeToolTip": "Octree\\Main.cpp",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAACkAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-09-17T21:53:32.726Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
