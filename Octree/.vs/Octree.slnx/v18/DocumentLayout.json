@@ -18,12 +18,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -32,7 +28,7 @@
               "RelativeDocumentMoniker": "Octree\\Octree.hpp",
               "ToolTip": "D:\\EDA\\Octree\\Octree\\Octree.hpp",
               "RelativeToolTip": "Octree\\Octree.hpp",
-              "ViewState": "AgIAAKoAAAAAAAAAAAAAANMAAAADAAAAAAAAAA==",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAEwAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2026-09-17T21:54:39.724Z",
               "EditorCaption": ""
@@ -45,7 +41,7 @@
               "RelativeDocumentMoniker": "Octree\\Main.cpp",
               "ToolTip": "D:\\EDA\\Octree\\Octree\\Main.cpp",
               "RelativeToolTip": "Octree\\Main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAAAHoAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-09-17T21:53:32.726Z",
               "EditorCaption": ""

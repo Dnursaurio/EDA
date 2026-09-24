@@ -1,11 +1,11 @@
 ﻿  Main.cpp
-D:\EDA\Octree\Octree\Octree.hpp(167,16): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
+D:\EDA\Octree\Octree\Octree.hpp(175,16): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
   (compilando archivo de origen "Main.cpp")
   
-D:\EDA\Octree\Octree\Octree.hpp(180,22): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
+D:\EDA\Octree\Octree\Octree.hpp(188,22): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
   (compilando archivo de origen "Main.cpp")
   
-D:\EDA\Octree\Octree\Octree.hpp(181,22): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
+D:\EDA\Octree\Octree\Octree.hpp(189,22): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
   (compilando archivo de origen "Main.cpp")
   
   Octree.vcxproj -> D:\EDA\Octree\x64\Debug\Octree.exe

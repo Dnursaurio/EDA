@@ -66,10 +66,15 @@ public:
 				if (puntos[i].x == p.x && puntos[i].y == p.y && puntos[i].z == p.z)
 				{
 					cout << "El punto: " << p.x << ", " << p.y << ", " << p.z << " SI existe" << endl;
+					cout << "La esquina izquierda de el punto " << p.x << ", " << p.y << ", " << p.z << " es " << esquina_izquierda.x << ", " << esquina_izquierda.y << ", " << esquina_izquierda.z << endl;
+					cout << "La esquina izquierda de el punto " << p.x << ", " << p.y << ", " << p.z << " es " << altura << endl;
+					
 					return 1;
 				}
 			}
 			cout << "El punto: " << p.x << ", " << p.y << ", " << p.z << " NO existe" << endl;
+			cout << "La esquina izquierda de el punto " << p.x << ", " << p.y << ", " << p.z << " es " << esquina_izquierda.x << ", " << esquina_izquierda.y << ", " << esquina_izquierda.z << endl;
+			cout << "La esquina izquierda de el punto " << p.x << ", " << p.y << ", " << p.z << " es " << altura << endl;
 			return 0;
 		}
 	}
@@ -147,6 +152,9 @@ public:
 
 	Punto Buscar_cercanos(Punto& p, int radio)
 	{
+		int n;
+		cout << "Ingrese un n de puntos: ";
+		cin >> n;
 		vector<Punto> mas_cercanos;
 		//vamos a explorar el arbol
 		int centro_X = esquina_izquierda.x + altura / 2;
@@ -184,7 +192,10 @@ public:
 						cercano = mas_cercanos[j];
 					}
 				}
-				cout << "el punto mas cercano a: " << p.x << ", " << p.y << ", " << p.z << " es: " << cercano.x << ", " << cercano.y << ", " << cercano.z << endl;
+				for (int i = 0; i < n; i++)
+				{
+					cout << "el punto mas cercano a: " << p.x << ", " << p.y << ", " << p.z << " es: " << mas_cercanos[i].x << ", " << mas_cercanos[i].y << ", " << mas_cercanos[i].z << endl;
+				}
 				return cercano;
 			}
 		}
@@ -210,6 +221,9 @@ public:
 		{
 			cout << puntos[i].x << ", " << puntos[i].y << ", " << puntos[i].z << endl;
 		}
+		cout << "la altura es: " << altura << endl;
+		cout << "la esquina inferior izquierda es: " << esquina_izquierda.x << ", " << esquina_izquierda.y << ", " << esquina_izquierda.z << endl;
+		cout << "el numero de puntos es: " << nro_puntos << endl;
 	}
 private:
 	//Con esto creamos los cubos, Nodos del arbol
