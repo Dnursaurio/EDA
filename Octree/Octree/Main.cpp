@@ -46,14 +46,17 @@ int main()
 			cout << "ingrese la ruta de su archivo: ";
 			cin >> ruta;
 			ifstream archivolectura(ruta);
-			int x, y, z, altura, nro_puntos = 0;
-			Punto Esquina_izq(0, 0, 0);
+			int x, y, z,limite, nro_puntos = 0;
+			cout << "ingrese el limite de division (procure usar un numero pequeño): ";
+			cin >> limite;
+			double altura;
+			Punto<int> Esquina_izq(0, 0, 0);
 			long long minDistanciaSq = LLONG_MAX;
-			Punto min(0, 0, 0);
+			Punto<int> min(0, 0, 0);
 			long long maxDistanciaSq = -1;
 			Punto max(0, 0, 0);
-			vector<Punto> pts;
-			Punto p(0, 0, 0);
+			vector<Punto<int>> pts;
+			Punto<int> p(0, 0, 0);
 			if (archivolectura.is_open())
 			{
 				char coma1, coma2;
@@ -85,7 +88,7 @@ int main()
 			archivolectura.close();
 			Esquina_izq = min;
 			altura = abs(max.x - min.x) + abs(max.y - min.y) + abs(max.z - min.z);
-			Octree o(Esquina_izq, altura, nro_puntos);
+			Octree<int> o(Esquina_izq, altura, limite);
 			for (int i = 0; i < pts.size(); i++)
 			{
 				o.Insertar(pts[i]);
@@ -98,7 +101,7 @@ int main()
 				cout << "------------------------------------" << endl;
 				cout << "1. Exitencia del dato\n2. Insertar datos \n3. Buscar Cercanos\n4. Imprimir \n5.Salir" << endl;
 				cin >> opcion;
-				Punto x(0, 0, 0);
+				Punto<int> x(0, 0, 0);
 				switch (opcion)
 				{
 				default:

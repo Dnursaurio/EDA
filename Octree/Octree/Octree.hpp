@@ -8,6 +8,7 @@
 
 using namespace std;
 
+template <class T>
 //Un punto tridimencional XYZ
 struct Punto
 {
@@ -15,7 +16,7 @@ struct Punto
 	int y;
 	int z;
 
-	Punto(int a, int b, int c)
+	Punto(T a, T b, T c)
 	{
 		x = a;
 		y = b;
@@ -25,12 +26,13 @@ struct Punto
 
 
 // El Octree
+template <class T>
 class Octree
 {
 public:
 	//metodos
 	//establcecemos limite para luego devidir
-	Octree(Punto a, int h, int nro_pts) : esquina_izquierda(0,0,0)
+	Octree(Punto<T> a, double h, int nro_pts) : esquina_izquierda(0,0,0)
 	{
 		for (int i = 0; i < 8; i++)
 		{
@@ -47,11 +49,11 @@ public:
 		cout << "\n" ;
 	}
 
-	bool existe(Punto& p)
+	bool existe(Punto<T>& p)
 	{
-		int centro_X = esquina_izquierda.x + altura / 2;
-		int centro_y = esquina_izquierda.y + altura / 2;
-		int centro_z = esquina_izquierda.z + altura / 2;
+		T centro_X = esquina_izquierda.x + altura / 2;
+		T centro_y = esquina_izquierda.y + altura / 2;
+		T centro_z = esquina_izquierda.z + altura / 2;
 		//un indice entre 0 y 7
 		int indice = (p.x >= centro_X) | ((p.y >= centro_y) << 1) | ((p.z >= centro_z) << 2);
 
@@ -79,7 +81,7 @@ public:
 		}
 	}
 
-	void Insertar(Punto& p)
+	void Insertar(Punto<T>& p)
 	{
 		if (this->existe(p))
 		{
@@ -91,9 +93,9 @@ public:
 			p.z >= esquina_izquierda.z && p.z <= esquina_izquierda.z + altura)
 		{
 			cout << "El punto: " << p.x << ", " << p.y << ", " << p.z << " esta dentro del cubo" << endl;
-			int centro_X = esquina_izquierda.x + altura / 2;
-			int centro_y = esquina_izquierda.y + altura / 2;
-			int centro_z = esquina_izquierda.z + altura / 2;
+			T centro_X = esquina_izquierda.x + altura / 2;
+			T centro_y = esquina_izquierda.y + altura / 2;
+			T centro_z = esquina_izquierda.z + altura / 2;
 			//un indice entre 0 y 7
 			int indice = (p.x >= centro_X) | ((p.y >= centro_y) << 1) | ((p.z >= centro_z) << 2);
 			if (hijos[indice] != nullptr)
@@ -113,20 +115,20 @@ public:
 				else
 				{
 					//subdividimos
-					int nueva_altura = altura / 2;
+					double nueva_altura = altura / 2;
 					//calculamos las esquinas de nuestros 8 octante nuevos
 					for (int i = 0; i < 8; i++)
 					{
 						//calculamos el octante
-						int Desplazamiento_en_x = (i & 1) ? nueva_altura : 0;
-						int Desplazamiento_en_y = ((i >> 1) & 1) ? nueva_altura : 0;
-						int Desplazamiento_en_z = ((i >> 2) & 1) ? nueva_altura : 0;
+						double Desplazamiento_en_x = (i & 1) ? nueva_altura : 0;
+						double Desplazamiento_en_y = ((i >> 1) & 1) ? nueva_altura : 0;
+						double Desplazamiento_en_z = ((i >> 2) & 1) ? nueva_altura : 0;
 
 						//desplazamos la esquina
-						Punto esquina_oct(esquina_izquierda.x + Desplazamiento_en_x, esquina_izquierda.y + Desplazamiento_en_y, esquina_izquierda.z + Desplazamiento_en_z);
+						Punto<T> esquina_oct(esquina_izquierda.x + Desplazamiento_en_x, esquina_izquierda.y + Desplazamiento_en_y, esquina_izquierda.z + Desplazamiento_en_z);
 						//creamos el octree nuevo
 						cout << "Creando el octante " << i + 1 << endl;
-						hijos[i] = new Octree(esquina_oct, nueva_altura, nro_puntos);
+						hijos[i] = new Octree<T>(esquina_oct, nueva_altura, nro_puntos);
 					}
 					//redistribucion de los puntos del padre en sus 8 octantes
 					for (int i = 0; i < puntos.size(); i++)
@@ -150,16 +152,16 @@ public:
 		}
 	}
 
-	Punto Buscar_cercanos(Punto& p, int radio)
+	Punto<T> Buscar_cercanos(Punto<T>& p, int radio)
 	{
 		int n;
 		cout << "Ingrese un n de puntos: ";
 		cin >> n;
-		vector<Punto> mas_cercanos;
+		vector<Punto<T>> mas_cercanos;
 		//vamos a explorar el arbol
-		int centro_X = esquina_izquierda.x + altura / 2;
-		int centro_y = esquina_izquierda.y + altura / 2;
-		int centro_z = esquina_izquierda.z + altura / 2;
+		T centro_X = esquina_izquierda.x + altura / 2;
+		T centro_y = esquina_izquierda.y + altura / 2;
+		T centro_z = esquina_izquierda.z + altura / 2;
 		//un indice entre 0 y 7
 		int indice = (p.x >= centro_X) | ((p.y >= centro_y) << 1) | ((p.z >= centro_z) << 2);
 		if (hijos[indice] != nullptr)
@@ -182,7 +184,7 @@ public:
 			}
 			if (!mas_cercanos.empty())
 			{
-				Punto cercano = mas_cercanos[0];
+				Punto<T> cercano = mas_cercanos[0];
 				for (int j = 1; j < mas_cercanos.size();j++)
 				{
 					int dist_actual = pow(mas_cercanos[j].x - p.x, 2) + pow(mas_cercanos[j].y - p.y, 2) + pow(mas_cercanos[j].z - p.z, 2);
@@ -199,7 +201,7 @@ public:
 				return cercano;
 			}
 		}
-		Punto basura(rand() % nro_puntos, rand() % nro_puntos, rand() % nro_puntos);
+		Punto<T> basura(rand() % nro_puntos, rand() % nro_puntos, rand() % nro_puntos);
 		cout << "NULL" << endl;
 		return basura;
 	}
@@ -228,9 +230,9 @@ public:
 private:
 	//Con esto creamos los cubos, Nodos del arbol
 	Octree* hijos[8];
-	vector<Punto> puntos;
-	Punto esquina_izquierda;
-	int altura;
+	vector<Punto<T>> puntos;
+	Punto<T> esquina_izquierda;
+	double altura;
 	int nro_puntos;
 };
 

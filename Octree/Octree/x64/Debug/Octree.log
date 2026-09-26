@@ -1,11 +1,130 @@
 ﻿  Main.cpp
-D:\EDA\Octree\Octree\Octree.hpp(175,16): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
+D:\EDA\Octree\Octree\Octree.hpp(211,16): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
+  (compilando archivo de origen "Main.cpp")
+      D:\EDA\Octree\Octree\Octree.hpp(211,16):
+      el contexto de creación de instancias de la plantilla (el más antiguo primero) es
+          D:\EDA\Octree\Octree\Main.cpp(91,16):
+          Vea la referencia a la creación de una instancia de clase plantilla "Octree<int>" que se está compilando
+          D:\EDA\Octree\Octree\Octree.hpp(209,7):
+          al compilar la función del miembro clase plantilla "void Octree<int>::imprimir(void)"
+              D:\EDA\Octree\Octree\Main.cpp(133,16):
+              vea la primera referencia a “Octree<int>::imprimir” en “main”
+  
+D:\EDA\Octree\Octree\Octree.hpp(212,16): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
   (compilando archivo de origen "Main.cpp")
   
-D:\EDA\Octree\Octree\Octree.hpp(188,22): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
+D:\EDA\Octree\Octree\Octree.hpp(213,16): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
   (compilando archivo de origen "Main.cpp")
   
-D:\EDA\Octree\Octree\Octree.hpp(189,22): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
+D:\EDA\Octree\Octree\Octree.hpp(162,14): warning C4244: 'inicializando': conversión de 'double' a 'T'; posible pérdida de datos
+D:\EDA\Octree\Octree\Octree.hpp(162,14): warning C4244:         with
+D:\EDA\Octree\Octree\Octree.hpp(162,14): warning C4244:         [
+D:\EDA\Octree\Octree\Octree.hpp(162,14): warning C4244:             T=int
+D:\EDA\Octree\Octree\Octree.hpp(162,14): warning C4244:         ]
+  (compilando archivo de origen "Main.cpp")
+      D:\EDA\Octree\Octree\Octree.hpp(162,14):
+      el contexto de creación de instancias de la plantilla (el más antiguo primero) es
+          D:\EDA\Octree\Octree\Octree.hpp(155,11):
+          al compilar la función del miembro clase plantilla "Punto<int> Octree<int>::Buscar_cercanos(Punto<int> &,int)"
+              D:\EDA\Octree\Octree\Main.cpp(128,23):
+              vea la primera referencia a “Octree<int>::Buscar_cercanos” en “main”
+  
+D:\EDA\Octree\Octree\Octree.hpp(163,14): warning C4244: 'inicializando': conversión de 'double' a 'T'; posible pérdida de datos
+D:\EDA\Octree\Octree\Octree.hpp(163,14): warning C4244:         with
+D:\EDA\Octree\Octree\Octree.hpp(163,14): warning C4244:         [
+D:\EDA\Octree\Octree\Octree.hpp(163,14): warning C4244:             T=int
+D:\EDA\Octree\Octree\Octree.hpp(163,14): warning C4244:         ]
+  (compilando archivo de origen "Main.cpp")
+  
+D:\EDA\Octree\Octree\Octree.hpp(164,14): warning C4244: 'inicializando': conversión de 'double' a 'T'; posible pérdida de datos
+D:\EDA\Octree\Octree\Octree.hpp(164,14): warning C4244:         with
+D:\EDA\Octree\Octree\Octree.hpp(164,14): warning C4244:         [
+D:\EDA\Octree\Octree\Octree.hpp(164,14): warning C4244:             T=int
+D:\EDA\Octree\Octree\Octree.hpp(164,14): warning C4244:         ]
+  (compilando archivo de origen "Main.cpp")
+  
+D:\EDA\Octree\Octree\Octree.hpp(177,16): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
+  (compilando archivo de origen "Main.cpp")
+  
+D:\EDA\Octree\Octree\Octree.hpp(190,22): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
+  (compilando archivo de origen "Main.cpp")
+  
+D:\EDA\Octree\Octree\Octree.hpp(191,22): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
+  (compilando archivo de origen "Main.cpp")
+  
+D:\EDA\Octree\Octree\Octree.hpp(96,15): warning C4244: 'inicializando': conversión de 'double' a 'T'; posible pérdida de datos
+D:\EDA\Octree\Octree\Octree.hpp(96,15): warning C4244:         with
+D:\EDA\Octree\Octree\Octree.hpp(96,15): warning C4244:         [
+D:\EDA\Octree\Octree\Octree.hpp(96,15): warning C4244:             T=int
+D:\EDA\Octree\Octree\Octree.hpp(96,15): warning C4244:         ]
+  (compilando archivo de origen "Main.cpp")
+      D:\EDA\Octree\Octree\Octree.hpp(96,15):
+      el contexto de creación de instancias de la plantilla (el más antiguo primero) es
+          D:\EDA\Octree\Octree\Octree.hpp(84,7):
+          al compilar la función del miembro clase plantilla "void Octree<int>::Insertar(Punto<int> &)"
+              D:\EDA\Octree\Octree\Main.cpp(94,15):
+              vea la primera referencia a “Octree<int>::Insertar” en “main”
+  
+D:\EDA\Octree\Octree\Octree.hpp(97,15): warning C4244: 'inicializando': conversión de 'double' a 'T'; posible pérdida de datos
+D:\EDA\Octree\Octree\Octree.hpp(97,15): warning C4244:         with
+D:\EDA\Octree\Octree\Octree.hpp(97,15): warning C4244:         [
+D:\EDA\Octree\Octree\Octree.hpp(97,15): warning C4244:             T=int
+D:\EDA\Octree\Octree\Octree.hpp(97,15): warning C4244:         ]
+  (compilando archivo de origen "Main.cpp")
+  
+D:\EDA\Octree\Octree\Octree.hpp(98,15): warning C4244: 'inicializando': conversión de 'double' a 'T'; posible pérdida de datos
+D:\EDA\Octree\Octree\Octree.hpp(98,15): warning C4244:         with
+D:\EDA\Octree\Octree\Octree.hpp(98,15): warning C4244:         [
+D:\EDA\Octree\Octree\Octree.hpp(98,15): warning C4244:             T=int
+D:\EDA\Octree\Octree\Octree.hpp(98,15): warning C4244:         ]
+  (compilando archivo de origen "Main.cpp")
+  
+D:\EDA\Octree\Octree\Octree.hpp(128,134): warning C4244: 'argumento': conversión de 'double' a 'T'; posible pérdida de datos
+D:\EDA\Octree\Octree\Octree.hpp(128,134): warning C4244:         with
+D:\EDA\Octree\Octree\Octree.hpp(128,134): warning C4244:         [
+D:\EDA\Octree\Octree\Octree.hpp(128,134): warning C4244:             T=int
+D:\EDA\Octree\Octree\Octree.hpp(128,134): warning C4244:         ]
+  (compilando archivo de origen "Main.cpp")
+  
+D:\EDA\Octree\Octree\Octree.hpp(128,91): warning C4244: 'argumento': conversión de 'double' a 'T'; posible pérdida de datos
+D:\EDA\Octree\Octree\Octree.hpp(128,91): warning C4244:         with
+D:\EDA\Octree\Octree\Octree.hpp(128,91): warning C4244:         [
+D:\EDA\Octree\Octree\Octree.hpp(128,91): warning C4244:             T=int
+D:\EDA\Octree\Octree\Octree.hpp(128,91): warning C4244:         ]
+  (compilando archivo de origen "Main.cpp")
+  
+D:\EDA\Octree\Octree\Octree.hpp(128,48): warning C4244: 'argumento': conversión de 'double' a 'T'; posible pérdida de datos
+D:\EDA\Octree\Octree\Octree.hpp(128,48): warning C4244:         with
+D:\EDA\Octree\Octree\Octree.hpp(128,48): warning C4244:         [
+D:\EDA\Octree\Octree\Octree.hpp(128,48): warning C4244:             T=int
+D:\EDA\Octree\Octree\Octree.hpp(128,48): warning C4244:         ]
+  (compilando archivo de origen "Main.cpp")
+  
+D:\EDA\Octree\Octree\Octree.hpp(54,14): warning C4244: 'inicializando': conversión de 'double' a 'T'; posible pérdida de datos
+D:\EDA\Octree\Octree\Octree.hpp(54,14): warning C4244:         with
+D:\EDA\Octree\Octree\Octree.hpp(54,14): warning C4244:         [
+D:\EDA\Octree\Octree\Octree.hpp(54,14): warning C4244:             T=int
+D:\EDA\Octree\Octree\Octree.hpp(54,14): warning C4244:         ]
+  (compilando archivo de origen "Main.cpp")
+      D:\EDA\Octree\Octree\Octree.hpp(54,14):
+      el contexto de creación de instancias de la plantilla (el más antiguo primero) es
+          D:\EDA\Octree\Octree\Octree.hpp(52,7):
+          al compilar la función del miembro clase plantilla "bool Octree<int>::existe(Punto<int> &)"
+              D:\EDA\Octree\Octree\Main.cpp(112,14):
+              vea la primera referencia a “Octree<int>::existe” en “main”
+  
+D:\EDA\Octree\Octree\Octree.hpp(55,14): warning C4244: 'inicializando': conversión de 'double' a 'T'; posible pérdida de datos
+D:\EDA\Octree\Octree\Octree.hpp(55,14): warning C4244:         with
+D:\EDA\Octree\Octree\Octree.hpp(55,14): warning C4244:         [
+D:\EDA\Octree\Octree\Octree.hpp(55,14): warning C4244:             T=int
+D:\EDA\Octree\Octree\Octree.hpp(55,14): warning C4244:         ]
+  (compilando archivo de origen "Main.cpp")
+  
+D:\EDA\Octree\Octree\Octree.hpp(56,14): warning C4244: 'inicializando': conversión de 'double' a 'T'; posible pérdida de datos
+D:\EDA\Octree\Octree\Octree.hpp(56,14): warning C4244:         with
+D:\EDA\Octree\Octree\Octree.hpp(56,14): warning C4244:         [
+D:\EDA\Octree\Octree\Octree.hpp(56,14): warning C4244:             T=int
+D:\EDA\Octree\Octree\Octree.hpp(56,14): warning C4244:         ]
   (compilando archivo de origen "Main.cpp")
   
   Octree.vcxproj -> D:\EDA\Octree\x64\Debug\Octree.exe
