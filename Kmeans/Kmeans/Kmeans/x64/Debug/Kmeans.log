@@ -1,0 +1,4 @@
+﻿  Kmeans.cpp
+C:\repositorios_ucsp\EDA\Kmeans\Kmeans.cpp(226,23): warning C4267: '=': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\repositorios_ucsp\EDA\Kmeans\Kmeans.cpp(231,23): warning C4267: '=': conversión de 'size_t' a 'int'; posible pérdida de datos
+  Kmeans.vcxproj -> C:\repositorios_ucsp\EDA\Kmeans\Kmeans\x64\Debug\Kmeans.exe
